@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div id="App">
       <header>
-        <h1>Chat Between V and E</h1>
+        <h1>Your Basic Conversation Between Two Besties!</h1>
       </header>
       <main>
         <ChatLog entries={chatData}></ChatLog>

@@ -12,7 +12,7 @@ const ChatLog = (props) => {
         timeStamp={entry.timeStamp}
         liked={entry.liked}></ChatEntry>
     );
-});
+  });
   return (
     <div className='chat-log'>
       {chatComponents}
