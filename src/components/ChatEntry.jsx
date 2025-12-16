@@ -1,15 +1,13 @@
 import './ChatEntry.css';
 import PropTypes from 'prop-types';
 import Timestamp from './TimeStamp';
-import { useState } from 'react';
 
 const ChatEntry = (props) => {
-  const [isLiked, setIsLiked] = useState(false);
   const toggleLiked = () => {
-    setIsLiked(!isLiked);
+    props.onToggleLiked(props.id);
   };
 
-  const heartColor = isLiked ? '❤️' : '🤍';
+  const heartColor = props.isLiked ? '❤️' : '🤍';
 
   return (
     <div className="chat-entry local">
@@ -28,7 +26,8 @@ ChatEntry.propTypes = {
   sender: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
-  liked: PropTypes.bool,
+  isLiked: PropTypes.bool.isRequired,
+  onToggleLiked: PropTypes.func.isRequired,
 };
 
 export default ChatEntry;
