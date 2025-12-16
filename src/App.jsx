@@ -17,10 +17,13 @@ const App = () => {
     setEntriesData(entries);
   };
 
+  const totalLikes = entriesData.filter(entry => entry.liked === true).length;
+
   return (
     <div id="App">
       <header>
         <h1>Your Basic Conversation Between Two Besties!</h1>
+        <h2>There are {totalLikes} ❤️s in this chat</h2>
       </header>
       <main>
         <ChatLog entries={entriesData}
