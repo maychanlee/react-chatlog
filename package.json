@@ -1,5 +1,6 @@
 {
   "name": "react-chatlog",
+  "homepage": "https://maychanlee.github.io/react-chatlog/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +10,11 @@
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest --run"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "luxon": "^2.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
