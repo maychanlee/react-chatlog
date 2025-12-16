@@ -32,7 +32,7 @@ ChatLog.propTypes = {
       timeStamp: PropTypes.string.isRequired,
       liked: PropTypes.bool.isRequired,
     })),
-  onToggleLiked: PropTypes.func.isRequired,
+  onToggleLiked: PropTypes.func,
 };
 
 export default ChatLog;

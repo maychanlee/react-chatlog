@@ -15,7 +15,7 @@ const ChatEntry = (props) => {
       <section className="entry-bubble">
         <p>{props.body}</p>
         <p className="entry-time"><Timestamp time={props.timeStamp}></Timestamp></p>
-        <button onClick={toggleLiked}>{heartColor}</button>
+        <button className="like" onClick={toggleLiked}>{heartColor}</button>
       </section>
     </div>
   );
@@ -26,8 +26,8 @@ ChatEntry.propTypes = {
   sender: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
-  isLiked: PropTypes.bool.isRequired,
-  onToggleLiked: PropTypes.func.isRequired,
+  isLiked: PropTypes.bool,
+  onToggleLiked: PropTypes.func,
 };
 
 export default ChatEntry;
